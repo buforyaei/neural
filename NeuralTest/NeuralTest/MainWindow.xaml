@@ -50,19 +50,20 @@
                 </TabItem>
                 <TabItem Header="One try">
                     <StackPanel Orientation="Vertical">
-                        <CheckBox 
-                            Content="is learning done" 
-                            Style="{StaticResource CheckBoxStyle}"
-                            IsEnabled="False"/>
-                        <TextBlock 
-                            Text="error" 
-                            Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  
-                            Style="{StaticResource TextBoxStyle}"/>
-                        <Button  
-                            Content="delete current network"
-                            Style="{StaticResource ButtonStyle}"
-                           />
+                        <TextBlock Text="year" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="month" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="day" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="hour" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="minute" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="width" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBlock Text="height" Style="{StaticResource DetailTextBlockStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
 
                     </StackPanel>
                 </TabItem>
