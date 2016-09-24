@@ -139,7 +139,7 @@ namespace NeuralTest.ViewModel
 
        
 
-        private IEnumerable<TrainingModel> NormalizeDatesInTrains(IEnumerable<TrainingModel> trainingModels)
+        private IEnumerable<TrainingModel> NormalizeDatesInTrains(IEnumerable<TrainingModel> trainingModels) //and NormalizeDayOfWeek
         {
             var maxDate = DateTime.MinValue;
             var minDate = DateTime.MaxValue;
@@ -152,9 +152,8 @@ namespace NeuralTest.ViewModel
             }
             foreach (var t in trainingModels)
             {
-                t.NormalizedDate = ((DateTimeToDouble(t.Dates) - DateTimeToDouble(minDate))
-                                    /(DateTimeToDouble(maxDate) - (DateTimeToDouble(minDate))));
-                                    
+                t.NormalizedDate = (DateTimeToDouble(t.Dates) - DateTimeToDouble(minDate))
+                                   /(DateTimeToDouble(maxDate) - DateTimeToDouble(minDate));
             }
             return trainingModels;
         }
@@ -239,9 +238,10 @@ namespace NeuralTest.ViewModel
             foreach (var t in tab)
             {
                 var date = DateTime.Parse(t[0]);
-                var x = (double.Parse(t[t.Count() - 2].Replace(".", ",")));
-                var y = (double.Parse(t[t.Count() - 1].Replace(".", ",")));
-                trainingModels.Add(new TrainingModel(date,x,y));
+                var x = double.Parse(t[t.Count() - 2].Replace(".", ","));
+                var y = double.Parse(t[t.Count() - 1].Replace(".", ","));
+                var category = t[1];
+                trainingModels.Add(new TrainingModel(date,x,y,category));
             }
             var a = NormalizeXY(trainingModels);
             return NormalizeDatesInTrains(a);
