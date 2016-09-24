@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TabControl>
-                <TabItem Header="Settings" HorizontalAlignment="Left" Width="59">
+                <TabItem Header="Settings">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="learning rate" Style="{StaticResource DetailTextBlockStyle}"/>
                         <TextBox  Style="{StaticResource TextBoxStyle}"/>
@@ -76,9 +76,9 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Text="Data" Style="{StaticResource TitleTextBlockStyle}" Margin="0,4,4,4"/>
-                <ListView Grid.Row="1">
+                <DataGrid ItemsSource="{Binding DataList}" Grid.Row="1">
 
-                </ListView>
+                </DataGrid>
                 <StackPanel Orientation="Horizontal" Grid.Row="2">
                     <Button Content="load data" Style="{StaticResource ButtonStyle}" Width="80" Margin="0,4,4,4"/>
                     <Button Content="use network" Style="{StaticResource ButtonStyle}" Width="80" />
