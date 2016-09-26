@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace NeuralTest.Model
 {
@@ -13,6 +14,7 @@ namespace NeuralTest.Model
         public double X { get; set; }
         public double Y { get; set; }
         public string Category { get; set; }
+        public Brush Brush { get; set; }
 
         public double NormalizedY { get; set; }
         public double NormalizedX { get; set; }
@@ -35,7 +37,58 @@ namespace NeuralTest.Model
             Category = category;
             X = x;
             Y = y;
+            Brush = Brushes.Yellow;
             CategoryVector = new Crimes().SearchCategoryVector(this);
+        }
+        public Brush ApproxBrush(int value)
+        {
+            //switch (value)
+            //{
+
+                //case 0: return ARSON;
+                //case "ASSAULT": return ASSAULT;
+                //case "BAD CHECKS": return BADCHECKS;
+                //case "BRIBERY": return BRIBERY;
+                //case "BURGLARY": return BURGLARY;
+                //case "DISORDERLY CONDUCT": return DISORDERLYCONDUCT;
+                //case "DRIVING UNDER THE INFLUENCE": return DRIVINGUNDERTHEINFLUENCE;
+                //case "DRUG/NARCOTIC": return DRUGNARCOTIC;
+                //case "DRUNKENNESS": return DRUNKENNESS;
+                //case "EMBEZZLEMENT": return EMBEZZLEMENT;
+                //case "EXTORTION": return EXTORTION;
+                //case "FAMILY OFFENSES": return FAMILYOFFENSES;
+                //case "FORGERY/COUNTERFEITING": return FORGERYCOUNTERFEITING;
+                //case "FRAUD": return FRAUD;
+                //case "GAMBLING": return GAMBLING;
+                //case "KIDNAPPING": return KIDNAPPING;
+                //case "LARCENY/THEFT": return LARCENYTHEFT;
+                //case "LIQUOR LAWS": return LIQUORLAWS;
+                //case "LOITERING": return LOITERING;
+                //case "MISSING PERSON": return MISSINGPERSON;
+                //case "NON-CRIMINAL": return NONCRIMINAL;
+                //case "OTHER OFFENSES": return OTHEROFFENSES;
+                //case "PORNOGRAPHY/OBSCENE MAT": return PORNOGRAPHYOBSCENEMAT;
+                //case "PROSTITUTION": return PROSTITUTION;
+                //case "RECOVERED VEHICLE": return RECOVEREDVEHICLE;
+                //case "ROBBERY": return ROBBERY;
+                //case "RUNAWAY": return RUNAWAY;
+                //case "SECONDARY CODES": return SECONDARYCODES;
+                //case "SEX OFFENSES FORCIBLE": return SEXOFFENSESFORCIBLE;
+                //case "SEX OFFENSES NON FORCIBLE": return SEXOFFENSESNONFORCIBLE;
+                //case "STOLEN PROPERTY": return STOLENPROPERTY;
+                //case "SUICIDE": return SUICIDE;
+                //case "SUSPICIOUS OCC": return SUSPICIOUSOCC;
+                //case "TREA": return TREA;
+                //case "TRESPASS": return TRESPASS;
+                //case "VANDALISM": return VANDALISM;
+                //case "VEHICLE THEFT": return VEHICLETHEFT;
+                //case "WARRANTS": return WARRANTS;
+                //case "WEAPON LAWS": return WEAPONLAWS;
+
+                //default:
+                    //return 1;
+            //}
+            return Brushes.Yellow;
         }
     }
 

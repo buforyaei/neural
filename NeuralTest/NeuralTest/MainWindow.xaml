@@ -17,21 +17,22 @@
                 <TabItem Header="Settings">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="learning rate" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding LearningRate}"/>
                         <TextBlock Text="momentum" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding Momentum}"/>
                         <TextBlock Text="sigmoid's alpha value" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding SigmoidAlpha}"/>
                         <TextBlock Text="number of records" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding NumberOfRecords}"/>
                         <TextBlock Text="hidden neurons number" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding HiddenNeuronsNumber}"/>
                         <TextBlock Text="iterations" Style="{StaticResource DetailTextBlockStyle}"/>
-                        <TextBox  Style="{StaticResource TextBoxStyle}"/>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Text="{Binding IterationsNumber}"/>
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Learning">
                     <StackPanel Orientation="Vertical">
+                        
                         <CheckBox 
                             Content="is learning done" 
                             Style="{StaticResource CheckBoxStyle}"
@@ -40,11 +41,14 @@
                             Text="error" 
                             Style="{StaticResource DetailTextBlockStyle}"/>
                         <TextBox  
-                            Style="{StaticResource TextBoxStyle}"/>
+                            Style="{StaticResource TextBoxStyle}"
+                            Text="{Binding ErrorNumber}"
+                            IsEnabled="False"/>
                         <Button  
                             Content="delete current network"
                             Style="{StaticResource ButtonStyle}"
-                           />
+                            Command="{Binding DeleteNetworkCmd}"/>
+                    
 
                     </StackPanel>
                 </TabItem>
@@ -80,10 +84,10 @@
 
                 </DataGrid>
                 <StackPanel Orientation="Horizontal" Grid.Row="2">
-                    <Button Content="load data" Style="{StaticResource ButtonStyle}" Width="80" Margin="0,4,4,4"/>
-                    <Button Content="use network" Style="{StaticResource ButtonStyle}" Width="80" />
-                    <Button Content="start learning" Style="{StaticResource ButtonStyle}" Width="80"/>
-                    <Button Content="stop" Style="{StaticResource ButtonStyle}"  Width="80" />
+                    <Button Content="load data" Style="{StaticResource ButtonStyle}" Width="80" Margin="0,4,4,4" Command="{Binding LoadTrainingDataCmd}"/>
+                    <Button Content="use network" Style="{StaticResource ButtonStyle}" Width="80" Command="{Binding UseNetworkCmd}"/>
+                    <Button Content="start learning" Style="{StaticResource ButtonStyle}" Width="80" Command="{Binding StartLearningCmd}"/>
+                    <Button Content="stop" Style="{StaticResource ButtonStyle}"  Width="80"/>
                 </StackPanel>
             </Grid>
         </Grid>

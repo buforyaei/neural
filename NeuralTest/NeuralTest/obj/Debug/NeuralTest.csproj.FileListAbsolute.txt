@@ -86,3 +86,5 @@ C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\App.baml
 C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\NeuralTest.g.resources
 C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\NeuralTest.Properties.Resources.resources
 C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\NeuralTest.csproj.GenerateResource.Cache
+C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\ProgressWindow.baml
+C:\Users\Tytus\Desktop\BIAI\neural\NeuralTest\NeuralTest\obj\Debug\ProgressWindow.g.cs
